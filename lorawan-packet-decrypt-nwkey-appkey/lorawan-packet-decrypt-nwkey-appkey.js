@@ -1,11 +1,10 @@
 // mvk@ca.ibm.com
 // adjustments
-// 2019-oct-17
+// 2021-Mar-21
 module.exports = function(RED) {
 
     var lora_packet = require('lora-packet');
-
-
+    
     function lorawandecrypt(config) {
         RED.nodes.createNode(this, config);
         var node = this;

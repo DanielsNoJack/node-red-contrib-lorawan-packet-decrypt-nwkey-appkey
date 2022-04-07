@@ -1,7 +1,11 @@
 # LoRaWAN Packet Decrypter using Network & App keys
 
-This node needs the network key and the app key to decrypt a LoraWan message/payload. Input is the payload with the data as ASCII in msg.payload like 'QIoaASYAYAABTqf1tMolR+Q='' which will be the decryped as a message in HEX like '001e091e' in msg.payload.out 
- <a href='https://github.com/markusvankempen'>  more infos here</a>
+This node needs the network key and the app key to decrypt a LoraWan message/payload. Input is the payload with the data as ASCII in msg.payload like 'QIoaASYAYAABTqf1tMolR+Q='' which will be the decryped as a message in HEX like '001e091e' in msg.payload.out - see image below or check or check for more
+ <a href='https://github.com/markusvankempen/LoraWAN-Traffic-Decrypt-and-Decode-using-Node-RED '>here</a> and 
+ <a href='https://learn.adafruit.com/using-lorawan-and-the-things-network-with-circuitpython?view=all'>here</a> 
+ 
+ 
+
 
 ## Installation
 npm -g install node-red-contrib-lorawan-packet-decrypt-nwkey-appkey
@@ -17,15 +21,17 @@ npm -g install node-red-contrib-lorawan-packet-decrypt-nwkey-appkey
 
 ## Features
 - decrypts msg.payload  into msg.payload.out (msg.payload.in )
+- msg.payload.buffers has all information about packet, especially DevAddr.
 
 ![Screenshot](images/Screenshot.png)
 
 ### Reference
-https://github.com/scne/node-red-contrib-lora-packet-converter
-https://www.npmjs.com/package/lora-packet
+- https://github.com/scne/node-red-contrib-lora-packet-converter
+- https://www.npmjs.com/package/lora-packet
 
 ### Author
 mvk@ca.ibm.com / markus@vankempen.org 
 
 ### Version 
-2019-Oct-17
+- Initial 2019-Oct-17
+- Update: 2021-Mar-21
