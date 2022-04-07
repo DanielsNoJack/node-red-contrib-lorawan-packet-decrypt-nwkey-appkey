@@ -28,7 +28,8 @@ module.exports = function(RED) {
                         node.send(msg);
 
                     } else {
-                        this.error("Network Key issue! Raw packet: " + packet );
+                        let err = "Network Key issue! Raw packet: " + packet;
+                        done ? done(err) : node.error(err, msg);
                         node.send(null);
                     }
                 } else {
