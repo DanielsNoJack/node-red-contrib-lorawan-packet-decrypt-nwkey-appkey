@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-lorawan-packet-decrypt-nwkey-appkey",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Node-RED LoRaWAN packet Decrypter using NW Key and APP Key",
   "author": {
     "name": "Markus van Kempen",
