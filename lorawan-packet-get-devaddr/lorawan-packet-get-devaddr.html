@@ -1,0 +1,33 @@
+<script type="text/javascript">
+    RED.nodes.registerType('lorawan-packet-get-devaddr',{
+        category: 'function',
+        color: '#E9967A',
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-info",
+        label: function() {
+            return this.name||"lorawan-packet-get-devaddr";
+        },
+        inputLabels: 'full payload',
+        outputLabels: 'payload with devAddr',
+        paletteLabel: "LoraWan Packet devAddr parser",
+        defaults: {
+            name: {value:""}
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="lorawan-packet-get-devaddr">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="LoraWan Packet devAddr parser">
+    <p>This node need on input LoraWan message in form of phyPayload.<br>
+      Input is the payload with the data as ASCII in msg.payload like 'QIoaASYAYAABTqf1tMolR+Q='' <br>
+      return will be the same message and devAddr in HEX like '03FF0001' (Big Endien)
+     <a href='https://github.com/markusvankempen'>  more infos here</a>
+    </p>
+</script>
