@@ -19,7 +19,8 @@
   ],
   "node-red": {
     "nodes": {
-      "lorawan-packet-decrypt-nwkey-appkey": "lorawan-packet-decrypt-nwkey-appkey/lorawan-packet-decrypt-nwkey-appkey.js"
+      "lorawan-packet-decrypt-nwkey-appkey": "lorawan-packet-decrypt-nwkey-appkey/lorawan-packet-decrypt-nwkey-appkey.js",
+      "lorawan-packet-get-devaddr": "lorawan-packet-get-devaddr/lorawan-packet-get-devaddr.js"
     }
   }
 }
