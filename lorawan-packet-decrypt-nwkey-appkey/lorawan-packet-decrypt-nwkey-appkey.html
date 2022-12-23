@@ -13,8 +13,8 @@
         paletteLabel: "LoraWan Packet Decrypter",
         defaults: {
             name: {value:""},
-            nsw: {value:"", required: true},
-            asw: {value:"", required: true}
+            nsw: {value:"", required: false},
+            asw: {value:"", required: false}
         }
     });
 </script>
@@ -34,10 +34,23 @@
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="LoraWan Packet Decrypter">
+<script type="text/x-red" data-help-name="lorawan-packet-decrypt-nwkey-appkey">
     <p>This node need the network key and the app key to decrypt a LoraWan message.<br>
+      You can set network and the app key in node config, or sent in dynamically in msg.nsk and msg.ask
       Input is the payload with the data as ASCII in msg.payload like 'QIoaASYAYAABTqf1tMolR+Q='' <br>
       return will be the decryted message in HEX like '001e091e'
      <a href='https://github.com/markusvankempen'>  more infos here</a>
     </p>
+    <dl>
+        <dt>input</dt>
+        <dd>msg.payload lora phyPayload</dd>
+        <dd>msg.nsk Network secret key (if not in node config)</dd>
+        <dd>msg.ask Application secret key (if not in node config)</dd>
+    </dl>
+    <dl>
+        <dt>output</dt>
+        <dd>msg.payload.in incomming phyPayload</dd>
+        <dd>msg.payload.out decrypted phyPayload</dd>
+        <dd>msg.payload.buffer all information in parsed from phyPayload</dd>
+    </dl>
 </script>
