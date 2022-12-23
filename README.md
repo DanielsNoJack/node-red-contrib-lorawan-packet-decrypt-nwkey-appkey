@@ -1,6 +1,16 @@
 # LoRaWAN Packet Decrypter using Network & App keys
+There are two nodes
+1. node LoraWan Packet devAddr parser
 
-This node needs the network key and the app key to decrypt a LoraWan message/payload. Input is the payload with the data as ASCII in msg.payload like 'QIoaASYAYAABTqf1tMolR+Q='' which will be the decryped as a message in HEX like '001e091e' in msg.payload.out - see image below or check or check for more
+With this node you can get devAddr for looking right network and application secret key in your DB
+
+2. node LoraWan Packet Decrypter
+
+This node needs the network key and the app key to decrypt a LoraWan message/payload. 
+
+You can specify keys in node config or send them as input. 
+
+Main input is the payload with the data as ASCII in msg.payload like 'QIoaASYAYAABTqf1tMolR+Q='' which will be the decryped as a message in HEX like '001e091e' in msg.payload.out - see image below or check or check for more
  <a href='https://github.com/markusvankempen/LoraWAN-Traffic-Decrypt-and-Decode-using-Node-RED '>here</a> and 
  <a href='https://learn.adafruit.com/using-lorawan-and-the-things-network-with-circuitpython?view=all'>here</a> 
  
@@ -22,6 +32,8 @@ npm -g install node-red-contrib-lorawan-packet-decrypt-nwkey-appkey
 ## Features
 - decrypts msg.payload  into msg.payload.out (msg.payload.in )
 - msg.payload.buffers has all information about packet, especially DevAddr.
+- msg.ask is possible to define Application secret key in msg object dynamicaly
+- msg.nsk is possible to define Network secret key in msg object dynamicaly
 
 ![Screenshot](images/Screenshot.png)
 
@@ -34,4 +46,4 @@ mvk@ca.ibm.com / markus@vankempen.org
 
 ### Version 
 - Initial 2019-Oct-17
-- Update: 2021-Mar-21
+- Update: 2022-Dec-23
