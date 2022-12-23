@@ -28,7 +28,7 @@ module.exports = function(RED) {
                     else
                     {
                         let err = "Error, Missing Network Secret Key!"
-                        done ? done(err) : node.error(err, msg)
+                        node.error(err, msg)
                         node.send(null)
                         return
                     }
@@ -46,7 +46,7 @@ module.exports = function(RED) {
                         else
                         {
                             let err = "Error, Missing Application Secret Key!"
-                            done ? done(err) : node.error(err, msg)
+                            node.error(err, msg)
                             node.send(null)
                             return
                         }
@@ -58,7 +58,7 @@ module.exports = function(RED) {
 
                     } else {
                         let err = "Network Key issue! Raw packet: " + packet
-                        done ? done(err) : node.error(err, msg)
+                        node.error(err, msg)
                         node.send(null)
                     }
                 } else {
